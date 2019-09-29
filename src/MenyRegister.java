@@ -4,8 +4,6 @@
  * Klasse for å lagre og jobbe med lister med menyer og matretter
  */
 
-package Oving10Programmering1;
-
 import java.util.ArrayList;
 
 public class MenyRegister

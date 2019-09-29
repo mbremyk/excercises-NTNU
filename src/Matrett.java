@@ -4,8 +4,6 @@
  * Klasse for å representere en matrett
  */
 
-package Oving10Programmering1;
-
 import java.util.ArrayList;
 
 public class Matrett

@@ -8,8 +8,6 @@
  * @author Brevik Magnus
  */
 
-package Oving10Programmering1;
-
 public class Arrangement implements Comparable
 {
     private final long arrangementNummer;

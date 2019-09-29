@@ -6,8 +6,6 @@
  * @author Brevik Magnus
  */
 
-package Oving10Programmering1;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

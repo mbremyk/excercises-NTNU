@@ -4,8 +4,6 @@
  * Klasse for å lagre og jobbe med en liste med Matretter
  */
 
-package Oving10Programmering1;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 
