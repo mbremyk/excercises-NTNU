@@ -147,7 +147,8 @@ public class ArrangementRegister
     {
         public int compare(Arrangement a1, Arrangement a2)
         {
-            return (int)(a1.getTidspunkt() - a2.getTidspunkt());
+            long l = a1.getTidspunkt() - a2.getTidspunkt();
+            return l > 0 ? 1 : (l < 0 ?  -1 : 0);
         }
     };
 
