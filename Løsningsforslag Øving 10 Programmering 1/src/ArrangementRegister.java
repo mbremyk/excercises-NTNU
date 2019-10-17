@@ -1,6 +1,6 @@
 /**
  * ArrangementRegister.java
- *
+ * <p>
  * Klasse for å jobbe med en liste med Arrangementer.
  *
  * @author Brevik Magnus
@@ -38,9 +38,9 @@ public class ArrangementRegister
     public ArrayList<Arrangement> getArrangementerBySted(String sted)
     {
         ArrayList<Arrangement> arrangementerBySted = new ArrayList<Arrangement>();
-        for(Arrangement arrangement : arrangementRegister)
+        for (Arrangement arrangement : arrangementRegister)
         {
-            if(arrangement.getSted().equalsIgnoreCase(sted))
+            if (arrangement.getSted().equalsIgnoreCase(sted))
             {
                 arrangementerBySted.add(arrangement);
             }
@@ -57,9 +57,9 @@ public class ArrangementRegister
     public ArrayList<Arrangement> getArrangementerByDato(long dato)
     {
         ArrayList<Arrangement> arrangementerByDato = new ArrayList<Arrangement>();
-        for(Arrangement arrangement : arrangementRegister)
+        for (Arrangement arrangement : arrangementRegister)
         {
-            if(arrangement.getDato() == dato)
+            if (arrangement.getDato() == dato)
             {
                 arrangementerByDato.add(arrangement);
             }
@@ -77,9 +77,9 @@ public class ArrangementRegister
     public ArrayList<Arrangement> getArrangementerBetween(long fraDato, long tilDato)
     {
         ArrayList<Arrangement> arrangementerBetween = new ArrayList<Arrangement>();
-        for(Arrangement arrangement : arrangementRegister)
+        for (Arrangement arrangement : arrangementRegister)
         {
-            if(arrangement.getDato() >= fraDato && arrangement.getDato() <= tilDato)
+            if (arrangement.getDato() >= fraDato && arrangement.getDato() <= tilDato)
             {
                 arrangementerBetween.add(arrangement);
             }
@@ -97,7 +97,7 @@ public class ArrangementRegister
      */
     public ArrayList<Arrangement> getArrangementerSorterEtter(SorterEtter sorterEtter)
     {
-        ArrayList<Arrangement> out = (ArrayList<Arrangement>)arrangementRegister.clone();
+        ArrayList<Arrangement> out = (ArrayList<Arrangement>) arrangementRegister.clone();
         Collections.sort(out, sorterEtter.getComparator());
         return out;
     }
@@ -112,6 +112,7 @@ public class ArrangementRegister
         TIDSPUNKT(CompareByTidspunkt);
 
         private Comparator<Arrangement> comparator;
+
         SorterEtter(Comparator<Arrangement> comparator)
         {
             this.comparator = comparator;
@@ -148,7 +149,7 @@ public class ArrangementRegister
         public int compare(Arrangement a1, Arrangement a2)
         {
             long l = a1.getTidspunkt() - a2.getTidspunkt();
-            return l > 0 ? 1 : (l < 0 ?  -1 : 0);
+            return l > 0 ? 1 : (l < 0 ? -1 : 0);
         }
     };
 
@@ -169,7 +170,7 @@ public class ArrangementRegister
     public String toString()
     {
         String out = "ArrangementRegister{\n";
-        for(Arrangement arrangement : arrangementRegister)
+        for (Arrangement arrangement : arrangementRegister)
         {
             out += "\t" + arrangement + "\n";
         }

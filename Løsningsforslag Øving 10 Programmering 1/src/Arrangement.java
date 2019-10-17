@@ -45,11 +45,11 @@ public class Arrangement implements Comparable
     @Override
     public int compareTo(Object o)
     {
-        int before = 0;
         if (o instanceof Arrangement)
         {
             Arrangement a = (Arrangement) o;
-            return (int)(this.tidspunkt - a.getTidspunkt());
+            long l = (this.tidspunkt - a.getTidspunkt());
+            return l > 0 ? 1 : (l < 0 ? -1 : 0);
         }
         else
         {

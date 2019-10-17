@@ -18,7 +18,6 @@ public class Oppgave1
         arrangementRegister.registrerNyttArrangement("Test", "Dødens dal", "UKA", "Konsert", 198301231800l);
         arrangementRegister.registrerNyttArrangement("Ekstra", "Dødens dal", "UKA", "Konsert", 201910021700l);
         arrangementRegister.registrerNyttArrangement("9/11", "WTC", "Geroge W. Bush", "Flykræsj", 200109111800l);
-        System.out.println(arrangementRegister.getArrangementerSorterEtter(ArrangementRegister.SorterEtter.TIDSPUNKT));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int input = -1;
 

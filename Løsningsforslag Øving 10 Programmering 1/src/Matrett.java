@@ -38,6 +38,7 @@ public class Matrett
      * @param o Objektet this skal sammeliknes med
      * @return true hvis this og o har samme navn, false hvis de er ulike, eller hvis o er null
      */
+    @Override
     public boolean equals(Object o)
     {
         if(o instanceof Matrett)
